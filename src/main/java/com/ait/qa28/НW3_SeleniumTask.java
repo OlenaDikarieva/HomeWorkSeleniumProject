@@ -37,7 +37,7 @@ public class НW3_SeleniumTask {
 
         WebElement element3 = driver.findElement(By.cssSelector("#bar-notification"));
 
-        WebElement element4 = driver.findElement(By.cssSelector("..master-wrapper-page"));
+        WebElement element4 = driver.findElement(By.cssSelector(".master-wrapper-page"));
 
         WebElement element5 = driver.findElement(By.cssSelector(".master-wrapper-content"));
     }
