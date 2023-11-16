@@ -37,7 +37,7 @@ public class НW3_SeleniumTask {
 
         WebElement element3 = driver.findElement(By.cssSelector("#bar-notification"));
 
-        WebElement element4 = driver.findElement(By.cssSelector(".login_login__3EHKB"));
+        WebElement element4 = driver.findElement(By.cssSelector("..master-wrapper-page"));
 
         WebElement element5 = driver.findElement(By.cssSelector(".master-wrapper-content"));
     }
@@ -45,7 +45,7 @@ public class НW3_SeleniumTask {
     @Test
     public void findElementByXpath() {
         //xpath-->//
-        System.out.println("++++++++++++By.cssSelectort++++++++++++++");
+        System.out.println("++++++++++++By.ByXpath++++++++++++++");
         List<WebElement> elementsByXPath = driver.findElements(By.xpath("//title"));
         for (WebElement element : elementsByXPath) {
             System.out.println(element.getText());
