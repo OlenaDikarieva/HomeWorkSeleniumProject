@@ -39,6 +39,25 @@ public class TableTest {
 
     }
 
+    @Test
+    public void xpathParentTeste(){
+        WebElement element = driver.findElement(By.xpath("//h1/parent"));
+        System.out.println(element.getText());
+        System.out.println("+++++++++++++++++++++++++");
+        WebElement element1 = driver.findElement(By.xpath("//h1/parent::div"));
+        System.out.println(element1.getText());
+        System.out.println("+++++++++++++++++++++++++");
+        WebElement element2 = driver.findElement(By.xpath("//h1/.."));
+        System.out.println(element2.getText());
+        //ancestor
+        System.out.println("+++++++++++ancestor++++++++++++++");
+        WebElement ancestor = driver.findElement(By.xpath("//h1/ancestor::*"));
+        System.out.println(ancestor.getText());
+        System.out.println("+++++++++++++++++++++++++");
+        
+
+    }
+
     //after -tearDown
     @AfterMethod(enabled = false)
     public  void tearDown(){
