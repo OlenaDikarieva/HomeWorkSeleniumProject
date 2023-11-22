@@ -1,14 +1,10 @@
-package com.ait.qa28.homework4;
+package com.ait.qa28.homework;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
 
 public class CreateNewAccountTests extends TestBase {
     //precondition:
@@ -26,11 +22,11 @@ public class CreateNewAccountTests extends TestBase {
         driver.findElement(By.name("FirstName")).click();
         driver.findElement(By.name("FirstName")).clear();
         driver.findElement(By.name("FirstName")).sendKeys("FirstName1");
-        //enter //input[@id='FirstName']
+        //enter //input[@id='LastName']
         driver.findElement(By.name("LastName")).click();
         driver.findElement(By.name("LastName")).clear();
         driver.findElement(By.name("LastName")).sendKeys("LastName1");
-        //enter //input[@id='FirstName']
+        //enter //input[@id='Email']
         driver.findElement(By.name("Email")).click();
         driver.findElement(By.name("Email")).clear();
         driver.findElement(By.name("Email")).sendKeys("nameLastname3@gmail.com");
