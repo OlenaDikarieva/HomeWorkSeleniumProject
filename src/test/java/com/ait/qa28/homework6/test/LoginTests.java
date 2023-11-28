@@ -1,5 +1,6 @@
 package com.ait.qa28.homework6.test;
 
+import com.ait.qa28.homework6.models.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,7 +17,9 @@ public class LoginTests extends TestBase {
     public void LoginRegisteredUserPositiveTest(){
         app.getUser().clickOnLoginLink();
       //  pause(1000);
-        app.getUser().fillLoginRegisterForm("nameLastname3@gmail.com", "Neuer1234$");
+        app.getUser().fillLoginRegisterForm(new User()
+                .setEmail("nameLastname3@gmail.com")
+                .setPassword("Neuer1234$"));
         app.getUser().clickOnLoginButton();
       //  pause(1000);
         Assert.assertTrue(app.getUser().isAccountPresent());

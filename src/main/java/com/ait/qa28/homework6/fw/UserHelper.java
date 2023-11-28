@@ -1,5 +1,6 @@
 package com.ait.qa28.homework6.fw;
 
+import com.ait.qa28.homework6.models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -28,9 +29,9 @@ public class UserHelper extends BaseHelper{
     public boolean isAccountPresent() {
         return isElementPresent(By.cssSelector(".account"));
     }
-    public void fillLoginRegisterForm(String email, String password) {
-        type(By.cssSelector("[name='Email']"), email);
-        type(By.cssSelector("[name='Password']"), password);
+    public void fillLoginRegisterForm(User user) {
+        type(By.cssSelector("[name='Email']"), user.getEmail());
+        type(By.cssSelector("[name='Password']"),  user.getPassword());
     }
     public void clickOnLoginButton() {
         click(By.xpath("//input[@class='button-1 login-button']"));
